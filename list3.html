@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>分岐処理</title>
+	<script>
+		var name = "たけし";
+		if (name == "たかし") { //if文 比較演算子、==と=に注意
+			console.log("はい、元気です");
+		} else {
+			console.log("私ではありません");
+		}
+	</script>
+
+	<script>
+		var name = "たけし";
+		if (name == "たかし" && name == "たてし") { //論理演算子
+			console.log("はい、元気です");
+		} else {
+			console.log("私ではありません");
+		}
+	</script>
+
+
+	<script>
+		var c;
+		if (!c) { //!演算子
+			console.log("cは空っぽです");
+		}
+	</script>
+
+	<script>
+		var name = "たけし";
+		if (name == "たかし" && name == "たてし") { //多分岐処理
+			console.log("はい、元気です");
+		} else if (name == "たくし") {
+			console.log("違います");
+　　　　 } else if (name == "たこし") {
+			console.log("私ではありません");
+　　　　 } else {
+			console.log("休みです");
+		}
+	</script>
+
+	<script>
+		var p = 7;
+		switch (p) { //switch文
+			case 1:
+				console.log("pは1です");
+		　　 case 3:
+				console.log("pは3です");
+			case 7:
+				console.log("pは7です");
+				break; //break文、defaultのコンソールは表示されなくなる
+			default:
+			    console.log("一致しません");
+		}
+    </script>
+
+    <script> //if文からswitch文に書き換え
+		var name = "たけし";
+		switch (name) {
+			case "たかし":
+			case "たてし":
+				console.log("はい、元気です");
+			case "たくし":
+				console.log("違います");
+　　　　 		case "たこし":
+				console.log("私ではありません");
+　　　　 　　 default:
+				console.log("休みです");
+		}
+	</script>
+
+	<script> //while文
+		var w = 7;
+		while (w <= 777) {
+			w *= 11;
+			console.log(w);
+		}
+		console.log("END");
+	</script>
+
+	<script> //for文
+		for (var i = 1; i <= 7; i++) {
+			console.log(i + "回目");
+		}
+	</script>
+
+	<script> //配列
+		var number = [1, 2, 3];
+		for (var i = 0; i < number.length; i++) {
+			console.log(number[i]);
+		}
+	</script>
+</head>
+<body></body>
+</html>
