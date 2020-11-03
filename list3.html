@@ -93,6 +93,39 @@
 			console.log(number[i]);
 		}
 	</script>
+
+	<script> //for-in文
+		var likes = {
+			animal : "ねこ",
+		    drink : "炭酸水",
+	        sports : "野球",
+		};
+		for (var key in likes) {
+	    	console.log(key + ":" + likes[key]);
+	    }
+	</script>
+
+	<script> //break文
+		var food = [100, 200, 300, 400];
+		for (var i = 0; i < food.length; i++) {
+			if (food[i] >= 250) {
+				break; //100、200の処理後、抜ける
+			}
+			console.log(food[i]);
+		}
+		console.log("買わない");
+	</script>
+
+	<script> //continue文
+		var number = [1, 1, 2, 1, 1];
+		for (var i = 0; i < number.length; i++) {
+			if (number[i] == 2) {
+				continue; //2の処理途中で、抜けて1の処理に映る
+			}
+			console.log(number[i]);
+		}
+		console.log("おしまい");
+	</script>
 </head>
 <body></body>
 </html>

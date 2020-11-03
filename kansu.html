@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>関数</title>
+
+	<script>
+		//関数の定義
+		function say() {
+			console.log("Hello");
+		}
+		//関数の呼び出し
+		say();
+	</script>
+
+	<script>
+		//関数の定義(引数あり)
+		function say(name) { //引数
+			console.log(name + ", Hello");
+		}
+		//関数の呼び出し（引数あり）
+		say("John");
+	</script>
+
+	<script>
+		//関数の定義(戻り値あり)
+		function price() {
+			var num = 0;
+			for (var i = 1; i <= 100; i++) {
+				num += i
+			}
+			return num; //戻り値
+		}
+		//関数の呼び出し（戻り値あり）
+		var total = price();
+		console.log(total);
+	</script>
+
+	<script>
+		//関数の定義(引数、戻り値あり)
+		function CalcCircle(radius) {
+			return radius * radius * 3.14;
+		}
+		function func() {
+			var area = CalcCircle(5);
+			return area;
+		}
+		console.log(CalcCircle());
+	</script>
+
+	<script>
+		//parseFloat parseIntも同じ利用方法
+		var str = "7.7";
+		console.log(str + 1);
+		var num = parseFloat(str);
+		console.log(num + 1);
+	</script>
+
+	<script>
+		//isNaN
+		var str = "x";
+		var num = parseInt(str);
+		if (isNaN(num)) {
+			console.log("失敗！");
+		}
+	</script>
+
+	<script>
+		//encodeURIComponent
+		var encode = encodeURIComponent("やあ");
+		console.log(encode);
+		//decodeURIComponent
+		var decode = decodeURIComponent(encode);
+		console.log(decode);
+	</script>
+
+	<script>
+		//グローバルスコープ
+		function func() {
+			str = "XYZ";
+			console.log(str);
+		}
+		func();
+		console.log(str);
+	</script>
+
+	<script>
+		//ローカルスコープ
+		function func() {
+			var str = "abc";
+			console.log(str);
+		}
+		func();
+		console.log(str);
+	</script>
+
+	<script>
+		//異なるスコープでの同名変数
+		var str = "日本"
+		function func1() {
+			var str = "func1";
+			console.log(str);
+		}
+		function func2() {
+			var str = "func2";
+			console.log(str);
+		}
+		func1();
+		func2();
+		console.log(str);
+	</script>
+
+	<script>
+		//グローバル変数の値
+		var num = 0;
+		function func() {
+			num++;
+		}
+		for (var i = 0; i < 10; i++) {
+			func();
+		}
+		console.log(num);
+	</script>
+
+	<script>
+		function say() {
+		console.log("おす");
+		}
+		var p = say; //関数の代入
+		p();
+	</script>
+
+	<script> //関数式
+		var p = function say() {
+			console.log("ヤッフー");
+		};
+		p();
+	</script>
+
+	<script> //匿名関数
+		var p = function() {
+			console.log("はーい");
+		};
+		p();
+	</script>
+
+	<script> //即時関数
+		(function(name) {
+			console.log(name + "さようなら");
+		})
+		("先生");
+	</script>
+</head>
+<body></body>
+</html>
