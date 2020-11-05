@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<title></title>
+	<script>
+		var obj = { //オブジェクトの作成
+			name : "もんた",
+			say : function() {
+				console.log(this.name + "、よろしくね"); //thisキーワード
+			}
+		};
+		obj.say(); //メソッドの呼び出し
+
+		var samp = {
+			name : "ぽんた",
+		}
+		obj.say.call(samp); //callメソッド
+
+	</script>
+
+	<script>
+		var obj1 = {
+			name : "さんた",
+			say : function(age, from) { //引数を設定
+				console.log(this.name + "、よろしくね");
+				console.log(age + "歳です。");
+				console.log(from + "出身です。");
+			}
+		};
+
+		var samp1 = {
+			name : "こんた",
+		};
+		obj1.say.call(samp1, 7, "沖縄"); //引数の中身
+	</script>
+
+　　<script>
+		var obj1 = {
+			name : "さんた",
+			say : function(age, from) { //引数を設定
+				console.log(this.name + "、よろしくね");
+				console.log(age + "歳です。");
+				console.log(from + "出身です。");
+			}
+		};
+
+		var samp1 = {
+			name : "こんた",
+		};
+		var param = [7, "沖縄"]; //第2引数以降は配列形式
+		obj1.say.apply(samp1, param); //applyメソッド
+	</script>
+</head>
+<body>
+</body>
+</html>

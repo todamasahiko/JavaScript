@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<title></title>
+	<script>
+		var today = new Date(); //Dateオブジェクト
+		console.log(
+			today.getFullYear() + "/" +
+			(today.getMonth() + 1) + "/" +
+			today.getDate()
+		);
+	</script>
+
+	<script>
+		console.log(Math.ceil(7.5));  //切り上げ
+		console.log(Math.floor(7.5)); //切り捨て
+		console.log(Math.round(7.5)); //四捨五入
+	</script>
+
+	<script>
+		var numbers = [1, 2, 3];
+		numbers.push(4, 5); //pushメソッド
+		console.log(numbers);
+	</script>
+
+	<script>
+		var numbers = [1, 2, 3];
+		var str = numbers.join(" "); //joinメソッド
+		console.log(str);
+	</script>
+
+	<script>
+		var numbers = [1, 2, 3];
+		numbers.reverse(); //reverseメソッド
+		console.log(numbers);
+	</script>
+
+	<script>
+		var words = ["Tokyo", "Osaka", "Nagoya"];
+		words.sort(); //sortメソッド
+		console.log(words);
+	</script>
+
+	<script>
+		var teamname = "チームどすこい";
+		var index = teamname.indexOf("どすこい"); //indexOfメソッド
+		var name = teamname.slice(0, index);      //sliceメソッド
+		console.log(name);
+	</script>
+
+	<script>
+		var frase = "勝って 兜の 緒を 締めよ";
+		var words = frase.split(" "); //splitメソッド
+		console.log(words);
+	</script>
+
+	<script>
+		var frase = "勝って 兜の 緒を 締めよ";
+		var words = frase.split(" "); //splitメソッド
+		console.log(words);
+	</script>
+
+	<script>
+		var date = "2020/11/05";
+		var result = date.match(/[0-9]+/g); //matchメソッド
+		console.log(result);
+	</script>
+
+	<script>
+		var message = "This is it";
+		var result = message.replace(/is/g, "at"); //replaceメソッド
+		console.log(result);
+	</script>
+</head>
+<body></body>
+</html>
