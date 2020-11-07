@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		function check(e) {
+			console.log(e.value + "がクリックされました");
+		}
+	</script>
+
+	<script>
+		function say() {
+			alert("おはよう");
+		}
+	</script>
+</head>
+<!-- loadイベント -->
+<body onload="console.log('こんにちは');">
+	<!-- clickイベント -->
+	<button onclick="say();">クリック</button>
+	<!-- mouseover/mouseoutイベント -->
+	<img src="image/samp.jpg" onmouseover="console.log('カーソルが乗っている');" onmouseout="console.log('カーソルが外れている');">
+	<!-- focus/blurイベント -->
+	<input type="text" onfocus="console.log('フォーカスがされている');" onblur="console.log('フォーカスがされていない');">
+	<!-- changeイベント -->
+	<select onchange="console.log('項目が変更されました');">
+		<option>犬</option>
+		<option>猫</option>
+		<option>猿</option>
+	</select>
+	<!-- thisキーワード -->
+    <input type="button" value="ボタン①" onclick="check(this);">
+    <input type="button" value="ボタン②" onclick="check(this);">
+    <input type="button" value="ボタン③" onclick="check(this);">
+</body>
+</html>
