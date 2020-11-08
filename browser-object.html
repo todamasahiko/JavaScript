@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		function check() {
+			var result = confirm("確認用メッセージ") //confirmメソッド
+			if (result) {
+			  console.log("OK");
+			} else {
+			  console.log("NG");
+			}
+		}
+	</script>
+
+　　<script>
+	    var count = 0;
+	    var timer = setInterval(output, 1000); //setIntervalメソッド
+		function output() {
+			count++;
+		    console.log(count + "秒経過");
+			if (count >= 10) {
+			  clearInterval(timer); //clearIntervalメソッド
+			}
+		}
+	</script>
+
+	<script>
+		function inputCheck() {
+			if (document.frm.lastname.value == "") {
+			  alert("姓を入力してね");
+			} else if (document.frm.firstname.value == "") {
+			  alert("名を入力してね");
+			} else if (!document.frm.gender[0]).checked && !document.frm.gender[1].checked {
+			  alert("性別を選択してね");
+		    } else {
+		      document.frm.submit();
+		    }
+		 }
+	</script>
+</head>
+
+<body>
+	<button onclick="check();">クリック</button>
+	<!-- openメソッド -->
+	<button onclick="open('browser-object1.html', null, 'width=300, height=150');">開く</button>
+    <h4>こんにちは</h4>
+    <!-- Locationオブジェクト -->
+	<button onclick="location.href='browser-object1.html';">移動</button>
+
+	<form name="frm" action="">
+</body>
+</html>
